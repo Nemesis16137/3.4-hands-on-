@@ -48,6 +48,26 @@
           </fieldset>
       </form>
    </article>
-   <script = scr="index.js"></script>
+	   <script>
+     var i = 1;
+     var listItem = "";
+  function processInput() {
+    if (i <= 5) {
+        listItem = "item" + i;
+	    var toolbox =
+	  	document.getElementById("toolBox").value;
+	  	
+        document.getElementById(listItem).innerHTML = toolbox;
+        toolbox = "";
+	
+		   if(i === 5){
+			   document.getElementById("resultsExpl").innerHTML = "Thanks for your suggestions";
+		   }
+	  i++;
+  }
+  }
+  	document.getElementById("button").addEventListener("click", processInput, false);
+
+   </script>
 </body>
 </html>
